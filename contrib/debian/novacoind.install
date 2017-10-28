@@ -1,0 +1,2 @@
+debian/bin/MtcCoind usr/bin
+src/MtcCoind usr/lib/MtcCoin

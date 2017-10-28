@@ -1,0 +1,11 @@
+[Unit]
+Description=MtcCoin daemon serivce
+After=network.target
+
+[Service]
+Type=simple
+User=MtcCoin
+ExecStart=/opt/MtcCoin/MtcCoind
+
+[Install]
+WantedBy=multi-user.target

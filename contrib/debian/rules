@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+# -*- mode: makefile; coding: utf-8 -*-
+
+DEB_INSTALL_EXAMPLES_MtcCoind += debian/examples/*
+DEB_INSTALL_MANPAGES_MtcCoind += debian/manpages/*
+
+%:
+	dh --with bash-completion $@
+
+override_dh_auto_build:
+	cd src; $(MAKE) -f makefile.unix MtcCoind USE_ASM=1 USE_LEVELDB=1
+	$(MAKE)
+
+override_dh_auto_clean:
+	if [ -f Makefile ]; then $(MAKE) clean; else rm -rf build/; rm -f MtcCoin-qt; fi
+	cd src; $(MAKE) -f makefile.unix clean
+
+override_dh_auto_configure:
+	qmake MtcCoin-qt.pro USE_ASM=1 USE_LEVELDB=1
+
+# Ensure wrapper is set executable
+binary-post-install/MtcCoind:
+	chmod +x $(cdbs_curdestdir)usr/bin/MtcCoind
+binary-post-install/MtcCoin-qt:
+	chmod +x $(cdbs_curdestdir)usr/bin/MtcCoin-qt

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=MtcCoin
+Comment=MtcCoin P2P Cryptocurrency
+Comment[ru]=MtcCoin, P2P криптовалюта
+Comment[fr]=MtcCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=MtcCoin, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/MtcCoin-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/MtcCoin80.xpm
+MimeType=x-scheme-handler/MtcCoin;
+Categories=Office;

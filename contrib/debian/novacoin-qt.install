@@ -1,0 +1,5 @@
+MtcCoin-qt usr/bin
+share/pixmaps/MtcCoin32.xpm usr/share/pixmaps
+share/pixmaps/MtcCoin80.xpm usr/share/pixmaps
+debian/MtcCoin-qt.desktop usr/share/applications
+debian/MtcCoin-qt.protocol usr/share/kde4/services/

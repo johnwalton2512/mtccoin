@@ -1,0 +1,9 @@
+Building MtcCoin
+
+See doc/readme-qt.rst for instructions on building MtcCoin Qt,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of MtcCoin.
+
+See doc/build-*.txt for instructions on building MtcCoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of MtcCoin.
